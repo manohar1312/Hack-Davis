@@ -11,7 +11,6 @@
 		003C6898220FADF7003612F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003C6897220FADF7003612F6 /* ViewController.swift */; };
 		003C689B220FADF7003612F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003C6899220FADF7003612F6 /* Main.storyboard */; };
 		003C689D220FADF8003612F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 003C689C220FADF8003612F6 /* Assets.xcassets */; };
-		003C68A8220FBD5E003612F6 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003C68A7220FBD5E003612F6 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +20,6 @@
 		003C689A220FADF7003612F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		003C689C220FADF8003612F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		003C68A1220FADF8003612F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		003C68A7220FBD5E003612F6 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +55,6 @@
 				003C6895220FADF7003612F6 /* AppDelegate.swift */,
 				003C6897220FADF7003612F6 /* ViewController.swift */,
 				003C6899220FADF7003612F6 /* Main.storyboard */,
-				003C68A7220FBD5E003612F6 /* CameraViewController.swift */,
 				003C689C220FADF8003612F6 /* Assets.xcassets */,
 				003C68A1220FADF8003612F6 /* Info.plist */,
 			);
@@ -136,7 +133,6 @@
 			files = (
 				003C6898220FADF7003612F6 /* ViewController.swift in Sources */,
 				003C6896220FADF7003612F6 /* AppDelegate.swift in Sources */,
-				003C68A8220FBD5E003612F6 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,7 +16,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var session:AVCaptureSession = AVCaptureSession()
     var output:AVCapturePhotoOutput = AVCapturePhotoOutput()
     
-    @IBOutlet weak var tempImageView: UIImageView!
+    
+    @IBOutlet weak var previewImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +25,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    @IBAction func cameraButtonPressed(_ sender:UIButton) {
+    @IBAction func captureButtonPressed(_ sender: UIButton) {
         capturePhoto()
     }
+    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         print("finish taking photo")
@@ -98,12 +100,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
 
         
-        let lastPhoto = UIImage(cgImage: cgImage, scale: 1.0, orientation: UIImage.Orientation.up)
+        let lastPhoto = UIImage(cgImage: cgImage, scale: 1.0, orientation: UIImage.Orientation.right)
         
         print(lastPhoto)
         print("UIImage generated. ")
         
-        tempImageView.image = lastPhoto
+        previewImageView.image = lastPhoto
 
     }
     
