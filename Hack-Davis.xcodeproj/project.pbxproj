@@ -11,6 +11,7 @@
 		003C6898220FADF7003612F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003C6897220FADF7003612F6 /* ViewController.swift */; };
 		003C689B220FADF7003612F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003C6899220FADF7003612F6 /* Main.storyboard */; };
 		003C689D220FADF8003612F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 003C689C220FADF8003612F6 /* Assets.xcassets */; };
+		00675ADD2210A9FC0032202A /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 00675ADC2210A9FC0032202A /* AppIcon.png */; };
 		2F7A34411931DB2D9F32D0B4 /* Pods_Hack_Davis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188645A10B212A59FE30AF35 /* Pods_Hack_Davis.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +22,7 @@
 		003C689A220FADF7003612F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		003C689C220FADF8003612F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		003C68A1220FADF8003612F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00675ADC2210A9FC0032202A /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
 		0524E73477749E43E9E990BE /* Pods-Hack-Davis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hack-Davis.debug.xcconfig"; path = "Target Support Files/Pods-Hack-Davis/Pods-Hack-Davis.debug.xcconfig"; sourceTree = "<group>"; };
 		188645A10B212A59FE30AF35 /* Pods_Hack_Davis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hack_Davis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		484001B83176E7966F6AAA0F /* Pods-Hack-Davis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hack-Davis.release.xcconfig"; path = "Target Support Files/Pods-Hack-Davis/Pods-Hack-Davis.release.xcconfig"; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				003C6899220FADF7003612F6 /* Main.storyboard */,
 				003C689C220FADF8003612F6 /* Assets.xcassets */,
 				003C68A1220FADF8003612F6 /* Info.plist */,
+				00675ADC2210A9FC0032202A /* AppIcon.png */,
 			);
 			path = "Hack-Davis";
 			sourceTree = "<group>";
@@ -82,7 +85,6 @@
 				0524E73477749E43E9E990BE /* Pods-Hack-Davis.debug.xcconfig */,
 				484001B83176E7966F6AAA0F /* Pods-Hack-Davis.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -148,6 +150,7 @@
 			files = (
 				003C689D220FADF8003612F6 /* Assets.xcassets in Resources */,
 				003C689B220FADF7003612F6 /* Main.storyboard in Resources */,
+				00675ADD2210A9FC0032202A /* AppIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
