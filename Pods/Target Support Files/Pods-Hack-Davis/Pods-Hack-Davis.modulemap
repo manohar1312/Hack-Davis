@@ -1,0 +1,6 @@
+framework module Pods_Hack_Davis {
+  umbrella header "Pods-Hack-Davis-umbrella.h"
+
+  export *
+  module * { export * }
+}
