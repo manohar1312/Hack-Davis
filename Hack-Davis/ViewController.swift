@@ -15,6 +15,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var imagevc:UIImagePickerController = UIImagePickerController()
     var session:AVCaptureSession = AVCaptureSession()
     var output:AVCapturePhotoOutput = AVCapturePhotoOutput()
+    var captureTimer = Timer()
+    
     
     
     @IBOutlet weak var previewImageView: UIImageView!
@@ -26,7 +28,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func captureButtonPressed(_ sender: UIButton) {
-        capturePhoto()
+        if sender.tag == 0{
+            sender.tag = 1
+            captureTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(capturePhoto), userInfo: nil, repeats: true)
+        }else if sender.tag == 1{
+            captureTimer.invalidate()
+            sender.tag = 0
+        }
+//        captureTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(capturePhoto), userInfo: nil, repeats: true)
+        
     }
     
     
@@ -53,7 +63,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         session.startRunning()
     }
     
-    func capturePhoto() {
+    @objc func capturePhoto() {
         guard let connection = output.connection(with: AVMediaType.video) else { return }
         
         let settings = AVCapturePhotoSettings()
