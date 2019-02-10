@@ -23,26 +23,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         setupSession()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let imagevc:CameraViewController = segue.destination as! CameraViewController
-//        imagevc.sourceType = .camera
-//        imagevc.allowsEditing = true
-//        imagevc.delegate = self
-//        imagevc.cameraCaptureMode = UIImagePickerController.CameraCaptureMode.photo;
-//        imagevc.cameraDevice = UIImagePickerController.CameraDevice.rear;
-//    }
     
     @IBAction func cameraButtonPressed(_ sender:UIButton) {
-        
-//        imagevc.sourceType = .camera
-//        imagevc.allowsEditing = true
-//        imagevc.delegate = self
-//        imagevc.cameraCaptureMode = UIImagePickerController.CameraCaptureMode.photo;
-//        imagevc.cameraDevice = UIImagePickerController.CameraDevice.rear;
-//        present(imagevc, animated: true) {
-//            print("camera view presented")
-//        }
         capturePhoto()
     }
     
@@ -60,22 +42,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             input = try AVCaptureDeviceInput(device: camera)
             
         } catch { return }
-
-//        camera.capturePhoto(with: settings, delegate: self)
         
         guard session.canAddInput(input)
             && session.canAddOutput(output) else { return }
         
         session.addInput(input)
         session.addOutput(output)
-        
-//        previewLayer = AVCaptureVideoPreviewLayer(session: session)
-//
-//        previewLayer!.videoGravity = AVLayerVideoGravityResizeAspect
-//        previewLayer!.connection?.videoOrientation = .Portrait
-//
-//        view.layer.addSublayer(previewLayer!)
-        
         session.startRunning()
     }
     
@@ -89,15 +61,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         output.capturePhoto(with: settings, delegate: self)
         
-//        output.captureStillImageAsynchronouslyFromConnection(connection) { (sampleBuffer, error) in
-//            guard sampleBuffer != nil && error == nil else { return }
-//
-//            let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
-//            guard let image = UIImage(data: imageData) else { return }
-//
-//            //do stuff with image
-//
-//        }
     }
     
     func photoOutput(_ output: AVCapturePhotoOutput, didCapturePhotoFor resolvedSettings: AVCaptureResolvedPhotoSettings) {
@@ -144,36 +107,5 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     }
     
-//    func photoOutput(_ output: AVCapturePhotoOutput, didFinishCaptureFor resolvedSettings: AVCaptureResolvedPhotoSettings, error: Error?) {
-//        <#code#>
-//    }
-//
-//    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
-//        if let error = error {
-//            print(error.localizedDescription)
-//        }
-//
-//        if let sampleBuffer = photoSampleBuffer, let previewBuffer = previewPhotoSampleBuffer, let dataImage =
-//            photoSampleBuffer.
-//            AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: sampleBuffer, previewPhotoSampleBuffer: previewBuffer)
-//        {
-//            print(UIImage(data: dataImage)!.size) // Your Image
-//        }
-//
-//    }
-
-//    func photoOutput(_ output: AVCapturePhotoOutput, didFinishCaptureFor resolvedSettings: AVCaptureResolvedPhotoSettings, error: Error?) {
-//        <#code#>
-//    }
-//
-//    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: AVCapturePhoto, error: Error?) {
-//        if let error = error {
-//            print(error.localizedDescription)
-//        }
-////
-//        if let sampleBuffer = photoSampleBuffer, let previewBuffer = previewPhotoSampleBuffer, let dataImage = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: sampleBuffer, previewPhotoSampleBuffer: previewBuffer) {
-//            print(image: UIImage(data: dataImage).size) // Your Image
-//        }
-//    }
 }
 
